@@ -1,4 +1,4 @@
-package com.example.myapptestmsapps;
+package com.example.myapptestmsapps.Activitys;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,7 +12,12 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapptestmsapps.CustomAdapter;
 import com.example.myapptestmsapps.Models.NewsHeadlines;
+import com.example.myapptestmsapps.OnFetchDataListener;
+import com.example.myapptestmsapps.R;
+import com.example.myapptestmsapps.RequestManager;
+import com.example.myapptestmsapps.SelectListener;
 
 import java.util.List;
 

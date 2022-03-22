@@ -1,4 +1,4 @@
-package com.example.myapptestmsapps;
+package com.example.myapptestmsapps.Activitys;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapptestmsapps.Models.NewsHeadlines;
+import com.example.myapptestmsapps.R;
 import com.squareup.picasso.Picasso;
 
 public class DetailsActivity extends AppCompatActivity implements View.OnClickListener {
