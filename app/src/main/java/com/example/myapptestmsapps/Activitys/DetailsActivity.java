@@ -42,12 +42,16 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
         CheckBox checkBoxHeart = (CheckBox) findViewById(R.id.cbHeart);
         checkBoxHeart.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
         if (((CheckBox)v).isChecked()) {
-            Toast.makeText(getApplicationContext(), "SAVED", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Added to Favorites", Toast.LENGTH_SHORT).show();
+
+        }else {
+            Toast.makeText(getApplicationContext(), "Removed from Favorites", Toast.LENGTH_SHORT).show();
         }
     }
 }

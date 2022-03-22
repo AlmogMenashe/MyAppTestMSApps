@@ -15,6 +15,16 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/fav_btn"
+            android:text="Favourites"
+            android:textSize="12sp"
+            android:padding="6dp"
+            android:layout_margin="6dp">
+
+        </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/btn_1"
             android:text="business"
             android:textSize="12sp"
@@ -91,6 +101,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
         app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+
         <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"

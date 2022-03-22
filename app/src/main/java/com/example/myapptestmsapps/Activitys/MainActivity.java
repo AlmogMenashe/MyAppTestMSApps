@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
     RecyclerView recyclerView;
     CustomAdapter adapter;
     ProgressDialog dialog;
-    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7;
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,favbtn;
     SearchView searchView;
 
     @Override
@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         btn6.setOnClickListener(this);
         btn7 = findViewById(R.id.btn_7);
         btn7.setOnClickListener(this);
+
+        favbtn = findViewById(R.id.fav_btn);
+        favbtn.setOnClickListener(this);
 
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, "general", null);
@@ -114,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         dialog.show();
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, category, null);
+
     }
 
 
