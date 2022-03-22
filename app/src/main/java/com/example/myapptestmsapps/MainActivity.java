@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,11 +22,10 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
     ProgressDialog dialog;
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7;
     SearchView searchView;
-    CheckBox checkBoxHeart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); //qq
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         searchView = findViewById(R.id.search_view);
@@ -65,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         btn6.setOnClickListener(this);
         btn7 = findViewById(R.id.btn_7);
         btn7.setOnClickListener(this);
-
 
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, "general", null);
@@ -113,7 +110,6 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, category, null);
     }
-
 
 
 }
