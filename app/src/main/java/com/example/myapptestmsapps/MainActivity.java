@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); //qq
         setContentView(R.layout.activity_main);
 
         searchView = findViewById(R.id.search_view);
