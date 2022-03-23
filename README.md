@@ -19,3 +19,10 @@ You can use any Implementation that can help you achieve the goal as long as you
 explain why it was needed (comment in app)
 Keep your code clean, using best practices and code reuse
 Use of Retrofit / OKHttp is a Bonus
+
+**images:**
+
+![image](https://user-images.githubusercontent.com/58885455/159682592-1f4098f8-73e3-4769-a3e7-c0a97694a00a.png)  
+![image](https://user-images.githubusercontent.com/58885455/159682803-3fcf33c4-c99c-4615-8fa3-22aa4b246ecd.png)
+
+
