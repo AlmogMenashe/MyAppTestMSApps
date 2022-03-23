@@ -84,7 +84,11 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
                 Toast.makeText(MainActivity.this,"No data found!!!", Toast.LENGTH_SHORT).show();
             }
             else{
-                showNews(list);
+                if (message.equals("Favourites")){ //favbtn
+                    showFavoriteNews(list);
+                    dialog.dismiss();
+                }
+                showNews(list); //btn1,btn2,btn3,btn4,btn5,btn6,btn7
                 dialog.dismiss();
             }
         }
@@ -103,6 +107,14 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         recyclerView.setAdapter(adapter);
     }
 
+    private void showFavoriteNews(List<NewsHeadlines> list) {
+        recyclerView = findViewById(R.id.recycler_main);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new GridLayoutManager(this,1));
+        adapter = new CustomAdapter(this , list, this);
+        recyclerView.setAdapter(adapter);
+    }
+
     @Override
     public void OnNewsClicked(NewsHeadlines headlines) {
        startActivity(new Intent(MainActivity.this, DetailsActivity.class)
@@ -113,10 +125,19 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
     public void onClick(View v) {
         Button button = (Button) v;
         String category = button.getText().toString();
-        dialog.setTitle("Fetching news articles of " + category);
-        dialog.show();
-        RequestManager manager = new RequestManager(this);
-        manager.getNewsHeadlines(listener, category, null);
+        if (category.equals("Favourites")){ //Favourites
+            dialog.setTitle("Favourites news articles");
+            dialog.show();
+            RequestManager manager = new RequestManager(MainActivity.this);
+            manager.getNewsHeadlines(listener, category, null);
+
+        }else { // all categorys
+            dialog.setTitle("Fetching news articles of " + category);
+            dialog.show();
+            RequestManager manager = new RequestManager(this);
+            manager.getNewsHeadlines(listener, category, null);
+
+        }
 
     }
 

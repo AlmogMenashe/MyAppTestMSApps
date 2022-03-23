@@ -17,6 +17,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     NewsHeadlines headlines;
     TextView txt_title,txt_author,txt_time, txt_detail, txt_content;
     ImageView img_news;
+    CheckBox checkBoxHeart;
 
 
     @Override
@@ -40,6 +41,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         txt_content.setText(headlines.getContent());
         Picasso.get().load(headlines.getUrlToImage()).into(img_news);
 
+
         CheckBox checkBoxHeart = (CheckBox) findViewById(R.id.cbHeart);
         checkBoxHeart.setOnClickListener(this);
 
@@ -48,7 +50,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         if (((CheckBox)v).isChecked()) {
-            Toast.makeText(getApplicationContext(), "Added to Favorites", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Added in Favorites", Toast.LENGTH_SHORT).show();
 
         }else {
             Toast.makeText(getApplicationContext(), "Removed from Favorites", Toast.LENGTH_SHORT).show();

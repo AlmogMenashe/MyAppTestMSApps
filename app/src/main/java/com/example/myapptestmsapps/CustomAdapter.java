@@ -2,7 +2,6 @@ package com.example.myapptestmsapps;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -41,12 +40,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
         }
 
-        holder.cardView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                listener.OnNewsClicked(headlines.get(position));
-            }
-        });
+        holder.cardView.setOnClickListener(v -> listener.OnNewsClicked(headlines.get(position)));
 
     }
 
